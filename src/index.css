@@ -188,6 +188,7 @@ section {
   color: hsl(var(--primary)); 
   font-style: italic;
   margin: 10px 0;
+  font-family:  "Poppins", sans-serif; 
 }
 
 .p-name {
@@ -196,13 +197,16 @@ section {
   font-size: 40px;
   color: hsl(var(--secondary)); 
   margin: 10px 0;
+  font-family:  "Poppins", sans-serif; 
 }
 
 .p-general {
   font-size: 20px;
   display: flex;
   justify-content: center;
-  color: hsl(var(--foreground))
+  color: hsl(var(--foreground)); 
+  font-family:  "Poppins", sans-serif; 
+
 }
 
 .card-container {
