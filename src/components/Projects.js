@@ -7,19 +7,27 @@ function Projects() {
   return (
     <div class="card-container">
         <div class="card"> 
-            <h4><b>Project 1</b></h4>
+            <h4><b>Mental Health Dashboard</b></h4>
             <p>Project Description</p>
         </div>
         <div class="card"> 
-            <h4><b>Project 2</b></h4>
+            <h4><b>O-Scratch</b></h4>
             <p>Project Description</p>
         </div>
         <div class="card"> 
-            <h4><b>Project 3</b></h4>
+            <h4><b>Deja Brew</b></h4>
             <p>Project Description</p>
         </div>
         <div class="card"> 
-            <h4><b>Project 4</b></h4>
+            <h4><b>Server Inventory System</b></h4>
+            <p>Project Description</p>
+        </div>
+        <div class="card"> 
+            <h4><b>SAP Automation System</b></h4>
+            <p>Project Description</p>
+        </div>
+        <div class="card"> 
+            <h4><b>Data Analysis Project</b></h4>
             <p>Project Description</p>
         </div>
 
