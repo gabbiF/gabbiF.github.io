@@ -13,7 +13,6 @@ import Reviews from "./components/Reviews";
 ></link>;
 
 function App() {
-  // const [darkMode, setDarkMode] = useState(false);
   const accordionItems = [
     {
       title: "IT Internship Southern California Edison",
