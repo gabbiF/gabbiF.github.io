@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f24f99e1.css",
+    "main.js": "/static/js/main.17ad7eb1.js",
+    "static/js/453.ed3810f9.chunk.js": "/static/js/453.ed3810f9.chunk.js",
+    "static/media/b_b_logo.webp": "/static/media/b_b_logo.766b06a06e83a97fd801.webp",
+    "static/media/mental_health.png": "/static/media/mental_health.9a7a9f1f328aa040fba8.png",
+    "static/media/deja_brew.png": "/static/media/deja_brew.45bf28fbe2840851aeea.png",
+    "static/media/meter_image.jpg": "/static/media/meter_image.64d88a099e15b6f6b965.jpg",
+    "static/media/info3370.png": "/static/media/info3370.54b5b98cbdde4b658077.png",
+    "static/media/server_image.jpg": "/static/media/server_image.d40808c493d4d1a77a1d.jpg",
+    "static/media/nlp_image.avif": "/static/media/nlp_image.1eaec89455394692432c.avif",
+    "index.html": "/index.html",
+    "main.f24f99e1.css.map": "/static/css/main.f24f99e1.css.map",
+    "main.17ad7eb1.js.map": "/static/js/main.17ad7eb1.js.map",
+    "453.ed3810f9.chunk.js.map": "/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f24f99e1.css",
+    "static/js/main.17ad7eb1.js"
+  ]
+}
