@@ -56,40 +56,23 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-
-      {/* <Navbar /> */}
       <div className="gradient_background">
-        <div className="home-container">
-          <Icon className="background-svg" />
-          <p className="p-primary">Welcome to my Website</p>
-          <p className="p-secondary">My Name is</p>
-          <p className="p-name">Gabriela Fite</p>
-        </div>
         <Routes>
           <Route
             path="/"
             element={
               <>
+                <div className="home-container">
+                  <Icon className="background-svg" />
+                  <p className="p-primary">Welcome to my Website</p>
+                  <p className="p-secondary">My Name is</p>
+                  <p className="p-name">Gabriela Fite</p>
+                </div>
                 <section id="home"></section>
-
                 <section id="about">
                   <h2 className="section-title">About Me</h2>
                   <AboutMe />
-                  {/* <div class="custom-shape-divider-bottom-1733625549">
-                    <svg
-                      data-name="Layer 1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 1200 120"
-                      preserveAspectRatio="none"
-                    >
-                      <path
-                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                        class="shape-fill"
-                      ></path>
-                    </svg>
-                  </div> */}
                 </section>
-
                 <section id="experience">
                   <h2 className="section-title">Experience</h2>
                   <div className="App">

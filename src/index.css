@@ -430,6 +430,7 @@ section {
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 100;
 }
 
 .resume:hover {
@@ -441,6 +442,7 @@ section {
   text-align: center;
   font-family: Arial, sans-serif;
   padding: 20px;
+  z-index: 100;
 }
 
 .resume-viewer {
@@ -523,7 +525,6 @@ section {
   left: 0;
   width: 100%;
   height: auto;
-  /* max-height: 150px; */
   z-index: 0;
   position: relative;
 }
