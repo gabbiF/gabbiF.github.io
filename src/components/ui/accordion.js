@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 
-
 const Accordion = ({ items }) => {
   const [activeIndex, setActiveIndex] = useState(null);
-
+  var icon = "▼";
   const handleToggle = (index) => {
-    setActiveIndex(activeIndex === index ? null : index); 
+    setActiveIndex(activeIndex === index ? null : index);
+    icon = "▲";
+  };
+  const span_style = {
+    position: "absolute",
+    right: "0",
+    alignItems: "right",
+    paddingRight: "80px",
   };
 
   return (
@@ -19,9 +25,8 @@ const Accordion = ({ items }) => {
             onClick={() => handleToggle(index)}
           >
             <span>{item.title}</span>
-            <span className="icon">
-              {activeIndex === index ? "▲" : "▼"}
-            </span>
+            <span style={span_style}>{item.time}</span>
+            <span className="icon">{icon}</span>
           </div>
           <div
             className={`accordion-content ${

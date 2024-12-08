@@ -1,27 +1,22 @@
-import React from 'react';
+import React from "react";
 
-import '../index.css'
+import "../index.css";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "./ui/accordion"
+} from "./ui/accordion";
 
-  
-  export function Experience() {
-    return (
-      <Accordion type="single" collapsible>
-        <AccordionItem value="item-1">
-        <AccordionTrigger>Is it accessible?</AccordionTrigger>
-      <AccordionContent>
-          Yes. It adheres to the WAI-ARIA design pattern.
-      </AccordionContent>
+export function Experience() {
+  return (
+    <Accordion type="single" collapsible>
+      <AccordionItem value="item-1">
+        <AccordionTrigger />
+        <AccordionContent />
       </AccordionItem>
-      </Accordion>
-  
-    )
-  }
+    </Accordion>
+  );
+}
 
-  export default Experience;
-  
+export default Experience;

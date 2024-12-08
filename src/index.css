@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fascinate&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
 
 @layer base {
   :root {
@@ -11,7 +13,7 @@
     --popover-foreground: 224 71.4% 4.1%;
     --primary: 262.1 83.3% 57.8%;
     --primary-foreground: 210 20% 98%;
-    --secondary: 240, 100%, 30%;
+    --secondary: 240, 50%, 70%;
     --secondary-foreground: 220.9 39.3% 11%;
     --muted: 220 14.3% 95.9%;
     --muted-foreground: 220 8.9% 46.1%;
@@ -24,6 +26,8 @@
     --ring: 262.1 83.3% 57.8%;
     --radius: 0.5rem;
     --toggle: 262.1 83.3% 57.8%;
+    --middle: 252.1 83.3% 50.8%;
+    --name: 252.1, 83.3%, 30%;
   }
 
   .dark {
@@ -48,6 +52,8 @@
     --input: 215 27.9% 16.9%;
     --ring: 263.4 70% 50.4%;
     --toggle: 262.1 83.3% 70.8%;
+    --middle: 260.1 83.3% 20.8%;
+    --name: 270, 60%, 85%;
   }
 }
 
@@ -59,7 +65,8 @@ nav {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
   border-bottom: 1px solid hsl(var(--border));
-  font-family: "Poppins", sans-serif;
+  font-family: "Noto Serif", sans-serif;
+  z-index: 10;
 }
 
 nav ul {
@@ -77,6 +84,7 @@ nav ul li a {
   font-size: 1.2rem;
   transition: color 0.3s ease;
   display: flex;
+  /* padding: 10px 15px; */
 }
 
 nav ul li a:hover {
@@ -92,24 +100,25 @@ nav ul li a.active {
 .accordion {
   max-width: 100%;
   margin: 20px auto;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  /* border: 1px solid #ddd; */
+  border-radius: 10px;
   overflow: hidden;
-  font-family: "Poppins", sans-serif;
+  font-family: "Noto Serif", sans-serif;
 }
 
 .accordion-item {
   border-top: 1px solid hsl(var(--background));
-  font-family: "Poppins", sans-serif;
+  font-family: "Noto Serif", sans-serif;
+  padding: 10px 0px;
 }
 
 .accordion-item:first-child {
   border-top: none;
-  font-family: "Poppins", sans-serif;
+  font-family: "Noto Serif", sans-serif;
 }
 
 .accordion-header {
-  padding: 15px;
+  padding: 20px;
   background: hsl(var(--foreground));
   color: hsl(var(--background));
   cursor: pointer;
@@ -117,7 +126,10 @@ nav ul li a.active {
   justify-content: space-between;
   align-items: center;
   transition: background 0.3s ease;
-  font-family: "Poppins", sans-serif;
+  font-family: "Noto Serif", sans-serif;
+  border-radius: 100px;
+  box-shadow: 0 4px 8px rgba(132, 171, 185, 0.3),
+    0 6px 12px rgba(177, 216, 230, 0.5);
 }
 
 .gradient_background {
@@ -133,11 +145,21 @@ nav ul li a.active {
   transform: rotate(180deg);
 }
 
+.accordion-header.active {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--background));
+}
+
 .accordion-content {
-  padding: 15px;
+  padding: 10px;
   display: none;
-  background: lightgrey;
+  top: 100%;
+  width: 95%;
+  justify-self: center;
+  background: hsl(var(--foreground));
   transition: max-height 0.3s ease, opacity 0.3s ease;
+  border-radius: 0px 0px 20px 20px;
+  color: hsl(var(--background));
 }
 
 .accordion-content.open {
@@ -154,7 +176,7 @@ nav ul li a.active {
   border-bottom: 2px solid hsl(var(--foreground));
   padding-bottom: 5px;
   text-transform: capitalize;
-  font-family: "Poppins", sans-serif;
+  font-family: "Noto Serif", sans-serif;
 }
 
 section {
@@ -164,30 +186,56 @@ section {
 .p-primary {
   display: flex;
   justify-content: center;
-  font-size: 32px;
+  font-size: 50px;
   color: hsl(var(--foreground));
   font-weight: bold;
   margin: 15px 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Noto Serif", sans-serif;
+  position: absolute;
+  z-index: 10;
+  top: 10%;
+  left: 20%;
 }
 
 .p-secondary {
   display: flex;
   justify-content: center;
-  font-size: 25px;
-  color: hsl(var(--popover));
-  font-style: italic;
-  margin: 10px 0;
-  font-family: "Poppins", sans-serif;
+  font-size: 35px;
+  color: hsl(var(--middle));
+  /* font-style: italic; */
+  /* margin: 10px 0; */
+  font-family: "Noto Serif", sans-serif;
+  top: 20%;
+  left: 25%;
+  z-index: 10;
+  position: absolute;
 }
 
 .p-name {
   display: flex;
   justify-content: center;
-  font-size: 80px;
-  color: hsl(var(--secondary));
+  position: absolute;
+  z-index: 10;
+  font-size: 150px;
+  color: hsl(var(--name));
   margin: 10px 0;
-  font-family: "Sacramento", cursive;
+
+  font-family: "Sacramento", sans-serif;
+  font-style: cursive;
+  top: 30%;
+  left: 35%;
+  font-weight: 500;
+}
+
+.p-title {
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  color: hsl(var(--foreground));
+  font-weight: bold;
+  margin: 15px 0;
+  font-family: "Noto Serif", sans-serif;
+  z-index: 10;
 }
 
 .p-general {
@@ -195,7 +243,8 @@ section {
   display: flex;
   justify-content: center;
   color: hsl(var(--foreground));
-  font-family: "Poppins", sans-serif;
+  font-family: "Noto Serif", sans-serif;
+  z-index: 0;
 }
 
 .card-container {
@@ -214,7 +263,7 @@ section {
   border-radius: 10px;
   border: 2px solid hsl(var(--foreground));
   color: hsl(var(--foreground));
-  font-family: "Poppins", sans-serif;
+  font-family: "Noto Serif", sans-serif;
 }
 
 .card:hover {
@@ -275,7 +324,7 @@ section {
   padding: 20px;
   text-align: center;
   transition: transform 0.3s ease;
-  font-family: "Poppins", sans-serif;
+  font-family: "Noto Serif", sans-serif;
 }
 
 .carousel-card:hover {
@@ -316,7 +365,6 @@ section {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Toggle Container */
 .toggle-container {
   width: 70px;
   height: 25px;
@@ -369,4 +417,145 @@ section {
 
 .icon {
   color: inherit;
+}
+
+.resume {
+  display: inline-block;
+  border: 2px solid var(--secondary);
+  border-radius: 8px;
+  padding: 5px 10px;
+  /* margin: 5px; */
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--foreground));
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.resume:hover {
+  color: white;
+  background-color: hsl(var(--muted));
+}
+
+.resume-page {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.resume-viewer {
+  margin: 20px auto;
+  max-width: 800px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.resume-frame {
+  width: 100%;
+  height: 600px;
+}
+
+.resume-download {
+  margin-top: 20px;
+}
+
+.download-button {
+  display: inline-block;
+  background-color: hsl(var(--secondary));
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  font-family: "Noto Serif", sans-serif;
+}
+
+.download-button:hover {
+  background-color: hsl(var(--primary));
+}
+
+.profile-container {
+  flex-shrink: 0;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  border: 15px solid hsl(var(--secondary));
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0px 10px;
+  text-decoration: none;
+  color: hsl(var(--foreground));
+  font-size: 1.2em;
+  transition: color 0.3s;
+  margin-left: 30px;
+}
+.social-links a:hover {
+  color: #005bb5;
+}
+
+.big-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-svg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  /* max-height: 150px; */
+  z-index: 0;
+  position: relative;
+}
+
+.foreground-text {
+  position: relative;
+  z-index: 1;
+  font-size: 24px;
+  color: black;
+}
+.custom-shape-divider-bottom-1733625615 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1733625615 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+  /* fill: hsl(var(--secondary)); */
+}
+
+.custom-shape-divider-bottom-1733625615 .shape-fill {
+  fill: pink;
+}
+
+.home-container {
+  position: relative;
 }

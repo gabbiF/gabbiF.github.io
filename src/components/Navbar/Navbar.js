@@ -3,16 +3,25 @@ import React from "react";
 // import { Link } from 'react-router-dom';
 import "../../index.css";
 import Toggle from "./../toggle";
+import { Link } from "react-router-dom";
 
 function Navbar() {
+  const linkStyle = {
+    textDecoration: "none",
+    color: "hsl(var(--foreground))",
+    fontSize: "1.2rem",
+    transition: "color 0.3s ease",
+    display: "flex",
+  };
+
   return (
     <nav>
       <ul>
-        <li>
+        <li style={{}}>
           <Toggle />
         </li>
         <li>
-          <a href="#home">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
           <a href="#about">About</a>
@@ -26,8 +35,10 @@ function Navbar() {
         <li>
           <a href="#testimonials">Testimonials</a>
         </li>
-        <li>
-          <a href="#resume">Resume</a>
+        <li className="resume">
+          <Link to="/resume" style={linkStyle}>
+            Resume
+          </Link>
         </li>
       </ul>
     </nav>
