@@ -5,7 +5,12 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --background-gradient: linear-gradient(135deg, #ffffff, #ecf3f8, #ffffff);
+    --background-gradient: linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #e0ecf8 50%,
+      #ffffff 100%
+    );
     --foreground: 224 69.4% 14%;
     --card: 0 0% 100%;
     --card-foreground: 224 71.4% 4.1%;
@@ -28,6 +33,16 @@
     --toggle: 262.1 83.3% 57.8%;
     --middle: 252.1 83.3% 50.8%;
     --name: 252.1, 83.3%, 30%;
+    --button-gradient: linear-gradient(
+      135deg,
+      rgba(0, 51, 102, 0.8),
+      rgba(102, 179, 255, 0.8)
+    );
+    --button-gradient-hover: linear-gradient(
+      135deg,
+      rgba(224, 179, 255, 1),
+      rgba(74, 26, 97, 1)
+    );
   }
 
   .dark {
@@ -54,6 +69,16 @@
     --toggle: 262.1 83.3% 70.8%;
     --middle: 260.1 83.3% 20.8%;
     --name: 270, 60%, 85%;
+    --button-gradient: linear-gradient(
+      135deg,
+      rgba(211, 166, 241, 0.8),
+      rgba(106, 42, 137, 0.8)
+    );
+    --button-gradient-hover: linear-gradient(
+      135deg,
+      rgba(0, 51, 102, 0.9),
+      rgba(102, 179, 255, 0.9)
+    );
   }
 }
 
@@ -118,12 +143,12 @@ nav ul li a.active {
 }
 
 .accordion-header {
-  padding: 20px;
+  padding: 10px;
   background: hsl(var(--foreground));
   color: hsl(var(--background));
   cursor: pointer;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   transition: background 0.3s ease;
   font-family: "Noto Serif", sans-serif;
@@ -132,6 +157,11 @@ nav ul li a.active {
     0 6px 12px rgba(177, 216, 230, 0.5);
 }
 
+.accordion-header .icon {
+  margin-left: auto;
+  text-align: right;
+  margin-right: 20px;
+}
 .gradient_background {
   background: var(--background-gradient);
   transition: background 0.3s ease-in-out;
@@ -174,13 +204,14 @@ nav ul li a.active {
   color: hsl(var(--foreground));
   align-self: center;
   border-bottom: 2px solid hsl(var(--foreground));
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   text-transform: capitalize;
   font-family: "Noto Serif", sans-serif;
 }
 
 section {
   padding: 20px;
+  padding-bottom: 30px;
 }
 
 .p-primary {
@@ -194,7 +225,7 @@ section {
   position: absolute;
   z-index: 10;
   top: 10%;
-  left: 20%;
+  left: 10%;
 }
 
 .p-secondary {
@@ -205,8 +236,8 @@ section {
   /* font-style: italic; */
   /* margin: 10px 0; */
   font-family: "Noto Serif", sans-serif;
-  top: 20%;
-  left: 25%;
+  top: 21%;
+  left: 30%;
   z-index: 10;
   position: absolute;
 }
@@ -222,7 +253,7 @@ section {
 
   font-family: "Sacramento", sans-serif;
   font-style: cursive;
-  top: 30%;
+  top: 32%;
   left: 35%;
   font-weight: 500;
 }
@@ -248,22 +279,29 @@ section {
 }
 
 .card-container {
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-  width: 100%;
-  max-width: 1200px;
   align-items: center;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 80px;
+  max-width: 1200px;
+  width: 90%;
+  box-sizing: border-box;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 20px;
+  padding-bottom: 200px;
   background-color: hsl(var(--background));
   border-radius: 10px;
   border: 2px solid hsl(var(--foreground));
   color: hsl(var(--foreground));
   font-family: "Noto Serif", sans-serif;
+  box-sizing: border-box;
+  min-height: 500px;
 }
 
 .card:hover {
@@ -273,6 +311,12 @@ section {
 
 .card.active {
   display: block;
+}
+
+.card p {
+  font-size: 15px;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
 }
 
 .buttons {
@@ -291,6 +335,32 @@ section {
   background-color: #007bff;
   color: white;
   border: none;
+}
+
+.card-buttons a {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 40px;
+  background: var(--button-gradient);
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s ease;
+  border-radius: 40px;
+}
+
+.card-buttons a:hover {
+  background: var(--button-gradient-hover);
+}
+
+.card-buttons {
+  display: "inline-block";
+  margin: -10px;
+  padding: 10px 15px;
+  /* background: "pink"; */
+  color: "#fff";
+  font-size: 14px;
+  transition: background 0.3s ease;
 }
 
 .carousel {
@@ -424,7 +494,6 @@ section {
   border: 2px solid var(--secondary);
   border-radius: 8px;
   padding: 5px 10px;
-  /* margin: 5px; */
   background-color: hsl(var(--secondary));
   color: hsl(var(--foreground));
   text-align: center;
@@ -440,17 +509,21 @@ section {
 
 .resume-page {
   text-align: center;
-  font-family: Arial, sans-serif;
+  font-family: "Noto Serif", sans-serif;
   padding: 20px;
   z-index: 100;
+  /* height: 80vh; */
 }
 
 .resume-viewer {
   margin: 20px auto;
   max-width: 800px;
+  height: auto;
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
+  min-height: 100vh;
+  display: flex;
 }
 
 .resume-frame {
@@ -550,7 +623,6 @@ section {
   display: block;
   width: calc(100% + 1.3px);
   height: 150px;
-  /* fill: hsl(var(--secondary)); */
 }
 
 .custom-shape-divider-bottom-1733625615 .shape-fill {
@@ -559,4 +631,118 @@ section {
 
 .home-container {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.timeline-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.timeline {
+  display: flex;
+  position: relative;
+  gap: 50px;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  padding: 10px;
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--secondary));
+  border-radius: 8px;
+  box-shadow: 0 2px 5px hsl(var(--foreground));
+  position: relative;
+}
+
+.timeline-content {
+  text-align: center;
+}
+
+.timeline-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: hsl(var(--name));
+  font-family: "Noto Serif", sans-serif;
+}
+
+.timeline-degree {
+  font-size: 18px;
+  color: hsl(var(--foreground));
+  margin-bottom: 5px;
+  font-family: "Noto Serif", sans-serif;
+}
+
+.timeline-year {
+  font-size: 18px;
+  font-weight: bold;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 10px;
+  font-family: "Noto Serif", sans-serif;
+}
+
+.timeline-description {
+  font-size: 16px;
+  color: hsl(var(--muted-foreground));
+  line-height: 1.4;
+  font-family: "Noto Serif", sans-serif;
+}
+
+.timeline-connector {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 180px;
+  height: 5px;
+  background-color: hsl(var(--secondary));
+  margin-top: -1px;
+}
+
+.timeline-cover-image {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.timeline-cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timeline-item:hover {
+  transform: scale(1.05);
+}
+
+@keyframes sparkle {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.sparkle {
+  animation: sparkle 1s ease-out forwards;
+  color: #ffd700;
 }

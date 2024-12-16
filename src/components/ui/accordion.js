@@ -14,6 +14,13 @@ const Accordion = ({ items }) => {
     paddingRight: "80px",
   };
 
+  const imageStyle = {
+    width: "60px",
+    height: "60px",
+    borderRadius: "50%",
+    marginRight: "10px",
+  };
+
   return (
     <div className="accordion">
       {items.map((item, index) => (
@@ -24,6 +31,7 @@ const Accordion = ({ items }) => {
             }`}
             onClick={() => handleToggle(index)}
           >
+            <img src={item.image} alt="icon" style={imageStyle} />
             <span>{item.title}</span>
             <span style={span_style}>{item.time}</span>
             <span className="icon">{icon}</span>

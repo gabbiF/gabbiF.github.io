@@ -10,7 +10,7 @@ const ResumePage = () => {
           src={resumefile}
           type="application/pdf"
           width="100%"
-          height="800px"
+          height="calc(100vh - 150px)"
         />
       </div>
       <div className="resume-download">

@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 
+const imageStyle = {
+  width: "60px",
+  height: "60px",
+  borderRadius: "50%",
+  marginRight: "10px",
+};
 
 const Reviews = ({ cards }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,7 +22,7 @@ const Reviews = ({ cards }) => {
     );
   };
 
-  const visibleCards = 1; 
+  const visibleCards = 1;
 
   return (
     <div className="carousel">
@@ -37,6 +43,7 @@ const Reviews = ({ cards }) => {
           {cards.map((card, index) => (
             <div className="carousel-card" key={index}>
               <h3>{card.title}</h3>
+              <img src={card.image} alt="icon" style={imageStyle} />
               <p>{card.description}</p>
             </div>
           ))}
