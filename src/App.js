@@ -78,13 +78,14 @@ function App() {
             path="/"
             element={
               <>
-                <div className="home-container">
-                  <Icon className="background-svg" />
-                  <p className="p-primary">Welcome to my Website</p>
-                  <p className="p-secondary">My Name is</p>
-                  <p className="p-name">Gabriela Fite</p>
-                </div>
-                <section id="home"></section>
+                <section id="home">
+                  <div className="home-container">
+                    <Icon className="background-svg" />
+                    <p className="p-primary">Welcome to my Website</p>
+                    <p className="p-secondary">My Name is</p>
+                    <p className="p-name">Gabriela Fite</p>
+                  </div>
+                </section>
                 <section id="about">
                   <h2 className="section-title">About Me</h2>
                   <AboutMe />

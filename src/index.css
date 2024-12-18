@@ -211,7 +211,8 @@ nav ul li a.active {
 
 section {
   padding: 20px;
-  padding-bottom: 30px;
+
+  padding-bottom: 35px;
 }
 
 .p-primary {
@@ -224,7 +225,7 @@ section {
   font-family: "Noto Serif", sans-serif;
   position: absolute;
   z-index: 10;
-  top: 10%;
+  top: 7%;
   left: 10%;
 }
 
@@ -236,7 +237,7 @@ section {
   /* font-style: italic; */
   /* margin: 10px 0; */
   font-family: "Noto Serif", sans-serif;
-  top: 21%;
+  top: 20%;
   left: 30%;
   z-index: 10;
   position: absolute;
@@ -253,7 +254,7 @@ section {
 
   font-family: "Sacramento", sans-serif;
   font-style: cursive;
-  top: 32%;
+  top: 33%;
   left: 35%;
   font-weight: 500;
 }
@@ -634,14 +635,18 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-bottom: 50px;
 }
 
 .timeline-container {
   display: flex;
   justify-content: center;
-  padding: 20px;
+  /* padding: 20px; */
+  padding-top: 20px;
+  padding-bottom: 20px;
   width: 100%;
   overflow-x: auto;
+  margin: 0 auto;
 }
 
 .timeline {
@@ -654,13 +659,18 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 400px;
+  width: auto;
   padding: 10px;
   background-color: hsl(var(--card));
   border: 1px solid hsl(var(--secondary));
   border-radius: 8px;
   box-shadow: 0 2px 5px hsl(var(--foreground));
   position: relative;
+  flex-basis: 200px; /* Set a consistent width for items */
+  flex-grow: 1; /* Allow items to grow if needed */
+  flex-shrink: 1; /* Allow items to shrink if necessary */
+  max-width: 250px; /* Optional: Limit the maximum width */
+  min-width: 150px; /* Optional: Set a minimum width */
 }
 
 .timeline-content {
