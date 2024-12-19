@@ -174,7 +174,7 @@ function Projects() {
     <div>
       <div
         className="buttons"
-        style={{ marginBottom: "20px", textAlign: "center" }}
+        style={{ marginBottom: "20px", textAlign: "center", argin: "0 auto" }}
       >
         {categories.map((category) => (
           <button
@@ -217,14 +217,16 @@ function Projects() {
             className="card"
             style={{
               border: "1px solid #ddd",
-              borderRadius: "8px",
+              borderRadius: "10px",
               padding: "20px",
               paddingBottom: "50px",
               textAlign: "center",
               position: "relative",
-              height: "520px",
-              width: "400px",
+              height: "auto",
+              width: "auto",
+              alignItems: "stretch",
               justifyContent: "space-between",
+              // justifyContent: "center",
               // width: "90%",
             }}
           >

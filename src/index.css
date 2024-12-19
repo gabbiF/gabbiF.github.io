@@ -280,29 +280,32 @@ section {
 }
 
 .card-container {
-  display: grid;
-  align-items: center;
+  display: flex;
   margin: 0 auto;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 80px;
-  max-width: 1200px;
-  width: 90%;
+  gap: 90px;
+  /* max-width: 1400px; */
+  width: 100%;
   box-sizing: border-box;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
-  padding-bottom: 200px;
+  /* justify-content: space-between; */
+  /* padding: 20px;
+  padding-bottom: 200px;  */
   background-color: hsl(var(--background));
-  border-radius: 10px;
+  border-radius: 15px;
   border: 2px solid hsl(var(--foreground));
   color: hsl(var(--foreground));
   font-family: "Noto Serif", sans-serif;
   box-sizing: border-box;
-  min-height: 500px;
+  flex: 1 1 350px;
+  max-width: 350px;
 }
 
 .card:hover {
@@ -322,8 +325,9 @@ section {
 
 .buttons {
   text-align: center;
-  margin: 20px 0;
 }
+/* margin: 20px 0;
+} */
 
 .buttons button {
   padding: 10px 20px;
