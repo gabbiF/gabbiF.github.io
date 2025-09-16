@@ -760,3 +760,162 @@ section {
   animation: sparkle 1s ease-out forwards;
   color: #ffd700;
 }
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  nav ul {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .card-container {
+    gap: 32px;
+  }
+  .card {
+    flex: 1 1 45%;
+    max-width: 480px;
+  }
+  .timeline {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .card {
+    flex: 1 1 48%;
+    max-width: 420px;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    padding: 0.75rem 1rem;
+  }
+  nav ul {
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  nav ul li a {
+    font-size: 1rem;
+  }
+
+  .p-primary {
+    font-size: 32px;
+    position: static;
+    margin-top: 10px;
+    left: auto;
+    top: auto;
+  }
+  .p-secondary {
+    font-size: 24px;
+    position: static;
+    margin-top: 5px;
+    left: auto;
+    top: auto;
+  }
+  .p-name {
+    font-size: 64px;
+    position: static;
+    margin: 10px auto;
+    left: auto;
+    top: auto;
+  }
+  .p-title {
+    font-size: 28px;
+  }
+  .p-general {
+    font-size: 18px;
+    padding: 0 12px;
+    text-align: center;
+  }
+
+  .card-container {
+    gap: 20px;
+  }
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .buttons button {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .timeline {
+    gap: 20px;
+  }
+  .timeline-item {
+    flex-basis: 160px;
+    max-width: 200px;
+  }
+  .timeline-connector {
+    width: 80px;
+  }
+
+  .profile-container {
+    width: 220px;
+    height: 220px;
+    border-width: 10px;
+  }
+  .social-links a {
+    margin-left: 12px;
+    font-size: 1.1em;
+  }
+
+  .resume-viewer {
+    max-width: 100%;
+    min-height: auto;
+  }
+  .resume-frame {
+    height: 70vh;
+  }
+
+  .toggle-container {
+    top: 12px;
+    left: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    gap: 0.5rem;
+  }
+  nav ul li a {
+    font-size: 0.95rem;
+  }
+
+  .p-name {
+    font-size: 48px;
+  }
+  .p-primary {
+    font-size: 26px;
+  }
+  .p-secondary {
+    font-size: 20px;
+  }
+  .p-title {
+    font-size: 24px;
+  }
+  .p-general {
+    font-size: 16px;
+  }
+
+  .card-buttons a {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  .carousel {
+    padding: 0 10px;
+  }
+  .timeline-connector {
+    display: none;
+  }
+  .timeline-item {
+    min-width: 140px;
+  }
+  .profile-container {
+    width: 180px;
+    height: 180px;
+  }
+  .social-links a {
+    margin-left: 8px;
+  }
+}

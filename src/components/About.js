@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 // import profile_image from "./assets/4D42591A-0D00-4778-AE75-A5AF90570459.JPG";
-import profile_image from "./assets/profile_image.png";
+import profile_image from "./assets/profile2.png";
 import { FaLinkedin, FaGithub, FaHandshake } from "react-icons/fa";
 
 import "../index.css";
@@ -97,12 +97,13 @@ const AboutMe = () => {
         </div>
       </div>
       <p className="p-general">
-        I am a Senior At Cornell University studying Computer Science. My minor
-        is in Information Science with a Concentration in Data Science. My
-        interest include Software Engineering, Machine Learning, Data Analytics,
-        and Web Development. This website includes some of my recent projects,
-        relevant work experience, and more information about me! Take a look
-        around!
+        I am a Masters of Engineer student at Cornell University studying
+        Computer Science. My concentration is in Artificial Intelligence and
+        Machine Learning. I have a undergraduate degree in Computer Science with
+        a minor in Data Science. My interest include Software Engineering,
+        Machine Learning, Data Analytics, and Web Development. This website
+        includes some of my recent projects, relevant work experience, and more
+        information about me! Take a look around!
       </p>
     </div>
   );

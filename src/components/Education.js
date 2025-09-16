@@ -16,7 +16,7 @@ const educationData = [
   {
     institution: "Cornell University",
     degree: "Bachelors of Science in Computer Science",
-    year: "2021 - 2024",
+    year: "2021 - 2025",
     image: cornell_pretty,
     description:
       "Studying Computer Science with a Minor in Information Science, focusing on Data Science and Software Engineering.",
@@ -27,7 +27,7 @@ const educationData = [
     year: "2025 - 2025",
     image: cornell_grad,
     description:
-      "Concentration in Computer Science with emphasis in Artifical Intelligence and Project Management",
+      "Concentration in Computer Science with emphasis in Artifical Intelligence and Machine Learning",
   },
 ];
 
