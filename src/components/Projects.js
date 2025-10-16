@@ -10,6 +10,8 @@ import nlp_image from "./assets/nlp_image.avif";
 import info_report from "./assets/info_proj.pdf";
 import info_report2 from "./assets/FinalProject.pdf";
 import bert from "./assets/ps_4_bert_final.pdf";
+import mobility_analyzer from "./assets/frontend_traffic.png";
+import traffic_stats from "./assets/traffic_model.jpg";
 
 import "./../index.css";
 
@@ -20,24 +22,26 @@ function Projects() {
     "academic",
     "internship",
     "python",
-    "java",
+    "javascript",
     "OCaml",
     "HTML",
     "CSS",
     "R",
     "AI",
+    "research",
   ];
   const buttonColors = {
     all: "#007bff",
     academic: "#28a745",
     internship: "#ffc107",
     python: "#17a2b8",
-    java: "#e83e8c",
+    javascript: "#e83e8c",
     R: "#6f42c1",
     OCaml: "#fd7e14",
     CSS: "#20c997",
     HTML: "#6610f2",
     AI: "#ffb6c1",
+    research: "#dc3545",
   };
   const cards = [
     {
@@ -82,7 +86,7 @@ function Projects() {
     },
     {
       id: 4,
-      categories: ["internship", "python", "CSS", "HTML"],
+      categories: ["internship", "python", "CSS", "HTML", "javascript"],
       title: "Server Inventory System",
       image: server_image,
       description: `Created an application that stored important server information and functions. App was dynamically updated using a database 
@@ -144,6 +148,23 @@ function Projects() {
         { label: "Report", url: bert },
         { label: "Github", url: "https://github.com/gabbiF/ps4_bert" },
       ],
+    },
+    {
+      id: 9,
+      categories: ["academic", "python", "AI", "research"],
+      title: "Traffic Stats Modeling",
+      image: traffic_stats,
+      description: `Trained models using traffic data and geospatial data to predict traffic patterns and predict future traffic. Used python 
+      torch and pretraine models to perform the modeling. Contributed to the research paper and presented findings.
+`,
+    },
+    {
+      id: 10,
+      categories: ["academic", "HTML", "CSS", "javascript", "research"],
+      title: "Mobility Analyzer",
+      image: mobility_analyzer,
+      description: `Working on the frontend for a mobility analyzer that will be used to analyze traffic patterns and statistics. Use HTML, CSS, and Javascript to create the frontend and connect to the backend. 
+`,
     },
   ];
   const handleFilterClick = (category) => {

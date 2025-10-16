@@ -50,7 +50,7 @@ function App() {
       title: "Graduate Software Intern at MITRE",
       time: "June 2025 - August 2025",
       content:
-        "Worked in the Software Engineering Department. I developed several features for a protype including fuzzy search using postgresql tsvectors, multi-threaded record ingestion, and a task management system. Utilized Vue.js, Python, PostgreSQL, and Docker.",
+        "Worked in the Software Engineering Department as an intern, developing features for a prototype such as fuzzy search using PostgreSQL tsvectors, multi-threaded record ingestion, and a task management system. Contributed to projects optimizing record retrieval and asynchronous ingestion, while developing Vue.js components, maintaining databases and API integrations, and improving UI usability. Utilized Vue.js, Python, PostgreSQL, and Docker throughout the internship.",
       index: 0,
       image: mitre_logo,
     },
@@ -58,7 +58,7 @@ function App() {
       title: "Software Engineering Intern at Act I Systems",
       time: "January 2025 - January 2025",
       content:
-        "Developed applications for clients using C. Worked with mentor to estabish datamanagement system and create frontend. ",
+        "Worked with a mentor to develop an application for generating radio station proposals, aimed at improving client workflow and reducing errors. Designed a data storage system to optimize retrieval times, collaborated with team members to define key features and user requirements, and built functionality that reduced error resolution time while enhancing customer satisfaction.",
       index: 1,
       image: act_i_logo,
     },
