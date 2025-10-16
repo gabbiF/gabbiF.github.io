@@ -1,5 +1,5 @@
 import React from "react";
-import resumefile from "./assets/resume.pdf";
+import resumefile from "./assets/Resume_GabrielaF2025.pdf";
 
 const ResumePage = () => {
   return (

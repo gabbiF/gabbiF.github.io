@@ -27,7 +27,7 @@ const educationData = [
     year: "2025 - 2025",
     image: cornell_grad,
     description:
-      "Concentration in Computer Science with emphasis in Artifical Intelligence and Machine Learning",
+      "Concentration in Computer Science with emphasis in Artifical Intelligence and Machine Learning ",
   },
 ];
 

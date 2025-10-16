@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import Navbar from "./components/Navbar/Navbar";
@@ -14,15 +14,60 @@ import cce_logo from "./components/assets/cce_logo.png";
 import bowers_logo from "./components/assets/bowers_logo.jpg";
 // import cornell_pretty from "./components/assets/cornell_pretty.webp";
 import cornell_logo from "./components/assets/cornell_logo.png";
+import mitre_logo from "./components/assets/mitre_logo_pretty.jpg";
+import act_i_logo from "./components/assets/act_1_logo.jpg";
 
 function App() {
+  useEffect(() => {
+    const handleHashNavigation = () => {
+      const hash = window.location.hash;
+      // Only scroll if we're on the home page and there's a hash
+      if (hash && window.location.pathname === "/") {
+        const sectionId = hash.substring(1);
+        setTimeout(() => {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        }, 100);
+      }
+    };
+
+    handleHashNavigation();
+
+    window.addEventListener("hashchange", handleHashNavigation);
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashNavigation);
+    };
+  }, []);
+
   const accordionItems = [
+    {
+      title: "Graduate Software Intern at MITRE",
+      time: "June 2025 - August 2025",
+      content:
+        "Worked in the Software Engineering Department. I developed several features for a protype including fuzzy search using postgresql tsvectors, multi-threaded record ingestion, and a task management system. Utilized Vue.js, Python, PostgreSQL, and Docker.",
+      index: 0,
+      image: mitre_logo,
+    },
+    {
+      title: "Software Engineering Intern at Act I Systems",
+      time: "January 2025 - January 2025",
+      content:
+        "Developed applications for clients using C. Worked with mentor to estabish datamanagement system and create frontend. ",
+      index: 1,
+      image: act_i_logo,
+    },
     {
       title: "IT Internship Southern California Edison",
       time: "May 2024 - August 2024",
       content:
         "Interned in the Grid Transformation Office during the summer of 2024, my functional group was Netcomm and Advanced Metering Operations. Created scripts using Python and Visual Basic to automate processes done in SAP, which was the application that stored meter information. Produced programs that calculated KPIs for functional teams, saving team members several hours every week. Designed Power BI dashboards to analyze meter data. Developed pages and themes for GSAC (HTML, React, CSS, Shadcn, JavaScript), a site that hosted numerous Edison applications from different departments in Grid Service. ",
-      index: 1,
+      index: 2,
       image: ed_logo,
     },
     {
@@ -30,7 +75,7 @@ function App() {
       time: "May 2023 - August 2023",
       content:
         "Worked as an intern at the Grid Transformation Office. Reported to Grid Services Operations.Led the Server Inventory Manager Project, an application designed to store server information and perform server processes. This project used Python, Flask, SQL, MariaDB, Docker, JavaScript, HTML, and CSS to create a full-stack application. Moreover, I assisted my functional group with IT-related tasks such as creating documentation and tickets. ",
-      index: 2,
+      index: 3,
       image: ed_logo,
     },
     {
@@ -38,7 +83,7 @@ function App() {
       time: "January 2024 - Present",
       content:
         "I work as a teaching assistant for both the INFO 3300 and INFO 2950 courses at Cornell. INFO 2950, Introduction to Data Science, is a course taught in R about the fundamentals of Data Science. As a teaching assistant, I teach students about data models, web-scraping, machine-learning algorithms, and other topics from the course. INFO 3300, Interactive Web Design, uses HTML, CSS, and JavaScript to create front-end designs. Moreover, this course teaches students about making interactive models to display their data and findings. My responsibilities include hosting office hours, grading assignments, and leading discussion sections. ",
-      index: 3,
+      index: 4,
       image: bowers_logo,
     },
     {
@@ -46,7 +91,7 @@ function App() {
       time: "August 2024 - Present",
       content:
         "Assist administrators with creating reports, publishing events, and tracking participation. I made a procedure for polling participation across the counties where events are hosted and automatically calculating key performance indicators. My work reduces downtime since there is no manual calculation and it can be done asynchronously. Moreover, I also work on designs and visuals for administrator reports. Additionally, I update the Cornell Cooperative Extension website to include new events and provide resources for past events.",
-      index: 4,
+      index: 5,
       image: cce_logo,
     },
   ];
@@ -81,9 +126,28 @@ function App() {
                 <section id="home">
                   <div className="home-container">
                     <Icon className="background-svg" />
-                    <p className="p-primary">Welcome to my Website</p>
-                    <p className="p-secondary">My Name is</p>
-                    <p className="p-name">Gabriela Fite</p>
+                    <div className="home-content">
+                      <div className="home-text">
+                        <p className="p-primary">Welcome to my Website</p>
+                        <p className="p-secondary">My Name is</p>
+                        <p className="p-name">Gabriela Fite</p>
+                        <div className="home-description">
+                          <p>
+                            Computer Science Graduate Student at Cornell
+                            University
+                          </p>
+                          <p>Specializing in AI & Machine Learning</p>
+                        </div>
+                        <div className="home-cta">
+                          <a href="#about" className="cta-button">
+                            Learn More About Me
+                          </a>
+                          <a href="#projects" className="cta-button secondary">
+                            View My Projects
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </section>
                 <section id="about">

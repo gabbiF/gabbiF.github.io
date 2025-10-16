@@ -152,7 +152,7 @@ function Projects() {
     } else {
       setSelectedCategories((prevCategories) => {
         if (prevCategories.includes("all")) {
-          return prevCategories.filter((item) => item !== "all");
+          return [category];
         } else {
           return prevCategories.includes(category)
             ? prevCategories.filter((item) => item !== category)
@@ -216,7 +216,7 @@ function Projects() {
             key={card.id}
             className="card"
             style={{
-              border: "1px solid #ddd",
+              // border: "1px solid #ddd",
               borderRadius: "10px",
               padding: "20px",
               paddingBottom: "50px",
