@@ -89,7 +89,7 @@ const AboutMe = () => {
               <FaGithub />
             </a>
             <a
-              href="https://app.joinhandshake.com/profiles/33093754"
+              href="https://cornell.joinhandshake.com/profiles/szx7jc"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
