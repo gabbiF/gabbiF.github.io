@@ -299,7 +299,7 @@ section {
   display: flex;
   justify-content: center;
   font-size: 35px;
-  color: hsl(var(--middle));
+  color: hsl(var(--accent-foreground));
   margin: 10px 0;
   font-family: "Noto Serif", sans-serif;
 }

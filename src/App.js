@@ -21,7 +21,6 @@ function App() {
   useEffect(() => {
     const handleHashNavigation = () => {
       const hash = window.location.hash;
-      // Only scroll if we're on the home page and there's a hash
       if (hash && window.location.pathname === "/") {
         const sectionId = hash.substring(1);
         setTimeout(() => {
