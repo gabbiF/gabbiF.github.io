@@ -4,7 +4,6 @@ import "./index.css";
 import Navbar from "./components/Navbar/Navbar";
 import Accordion from "./components/ui/accordion";
 import Projects from "./components/Projects";
-import Reviews from "./components/Reviews";
 import ResumePage from "./components/Resume";
 import Education from "./components/Education";
 import AboutMe from "./components/About";
