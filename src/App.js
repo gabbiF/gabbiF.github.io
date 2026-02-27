@@ -132,10 +132,9 @@ function App() {
                         <p className="p-name">Gabriela Fite</p>
                         <div className="home-description">
                           <p>
-                            Computer Science Graduate Student at Cornell
-                            University
+                            Aspiring Software Engineer
                           </p>
-                          <p>Specializing in AI & Machine Learning</p>
+                          <p>With Experience in Full Stack Development and Machine Learning</p>
                         </div>
                         <div className="home-cta">
                           <a href="#about" className="cta-button">

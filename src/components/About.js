@@ -104,10 +104,12 @@ const AboutMe = () => {
           <div className="about-content">
             <h3 className="about-title">About Me</h3>
             <p className="about-description">
-              I am a Masters of Engineering student at Cornell University
-              studying Computer Science. My concentration is in Machine Learning
-              and Artifical Intelligence. I also hold a BS in Computer Science
-              with a minor in Data Science.
+              I am an aspiring Software Engineer with interests in full-stack development, 
+              machine learning, and database systems. I earned both my Master of Engineering
+              and Bachelor of Science in Computer Science from the Cornell University College
+              of Engineering, where I also minored in Data Science. During my master’s program, 
+              I concentrated in Machine Learning and Artificial Intelligence, deepening 
+              my experience in building data-driven and scalable systems.
             </p>
 
             <div className="about-interests">
