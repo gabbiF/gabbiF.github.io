@@ -94,24 +94,7 @@ function App() {
     },
   ];
 
-  const reviews = [
-    {
-      title: "Ezra Cornell",
-      image: cornell_logo,
-      description:
-        "Her full-stack coding skills, her drive to excel, and her communication skills are very rare amongst candidates, intern or full-time.",
-    },
-    {
-      title: "John Snow",
-      image: cornell_logo,
-      description: "We must protect the North!",
-    },
-    {
-      title: "Uncle Ben",
-      image: cornell_logo,
-      description: "With great power comes great responsibility",
-    },
-  ];
+ 
   return (
     <BrowserRouter>
       <Navbar />
@@ -165,10 +148,6 @@ function App() {
                   <h2 className="section-title">My Projects</h2>
                   <Projects />
                 </section>
-                {/* <section id="testimonials">
-                  <h2 className="section-title">Testimonials</h2>
-                  <Reviews cards={reviews} />
-                </section> */}
               </>
             }
           />
