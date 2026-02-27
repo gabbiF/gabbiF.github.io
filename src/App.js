@@ -11,8 +11,6 @@ import { ReactComponent as Icon } from "./components/wave.svg";
 import ed_logo from "./components/assets/so_cal_ed_logo.jpg";
 import cce_logo from "./components/assets/cce_logo.png";
 import bowers_logo from "./components/assets/bowers_logo.jpg";
-// import cornell_pretty from "./components/assets/cornell_pretty.webp";
-import cornell_logo from "./components/assets/cornell_logo.png";
 import mitre_logo from "./components/assets/mitre_logo_pretty.jpg";
 import act_i_logo from "./components/assets/act_1_logo.jpg";
 
